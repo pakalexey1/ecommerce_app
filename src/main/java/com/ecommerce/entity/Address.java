@@ -8,15 +8,11 @@ import javax.persistence.*;
 @Entity
 @NoArgsConstructor
 @Data
-public class Address {
+public class Address extends BaseEntity{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
+    private String name;
     private String street;
-    private String city;
-    private String zip;
+    private String zipCode;
 
     @ManyToOne
     private Customer customer;

@@ -8,14 +8,12 @@ import javax.persistence.*;
 @Entity
 @NoArgsConstructor
 @Data
-public class Customer {
+public class Customer extends BaseEntity{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
 
     private String firstName;
     private String lastName;
+    private String userName;
     private String email;
 
 
